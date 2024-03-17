@@ -1,0 +1,76 @@
+.rc-switch
+	background-color: #bfbfbf
+	border: none
+	border-radius: 1rem
+	box-sizing: border-box
+	cursor: pointer
+	display: inline-block
+	height: 2rem
+	line-height: 2rem
+	margin: 0.125rem 0
+	overflow: hidden
+	padding: 0
+	position: relative
+	transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1)
+	vertical-align: middle
+	width: 3.75rem
+
+	&-inner
+		&-checked,
+		&-unchecked
+			color: $white
+			font-size: 12px
+			position: absolute
+			top: 0
+			transition: left 0.3s cubic-bezier(0.35, 0, 0.25, 1)
+
+		&-checked
+			left: -1rem
+
+		&-unchecked
+			left: 2.5rem
+
+	&::after
+		animation-duration: 0.3s
+		animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1)
+		background-color: $white
+		border-radius: 50% 50%
+		content: " "
+		cursor: pointer
+		height: 1.5rem
+		left: 0.25rem
+		position: absolute
+		top: 0.25rem
+		transition: left 0.3s cubic-bezier(0.35, 0, 0.25, 1)
+		width: 1.5rem
+
+	&:focus
+		box-shadow: 0 0 0 2px #e6e6e6
+		outline: none
+
+	&-checked
+		background-color: $lightPurple
+
+		&-inner-checked
+			left: 0.5rem
+
+		&-inner-unchecked
+			left: 4.75rem
+
+		&:after
+			left: 2rem
+
+	&-disabled
+		background: #e6e6e6
+		border-color: #e6e6e6
+		cursor: no-drop
+
+	&-label
+		display: inline-block
+		font-size: 14px
+		line-height: 20px
+		padding-left: 10px
+		pointer-events: none
+		user-select: text
+		vertical-align: middle
+		white-space: normal

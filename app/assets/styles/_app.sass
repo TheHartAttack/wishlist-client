@@ -1,0 +1,22 @@
+#app
+	background: radial-gradient($lightPurple, $midPurple)
+	font-family: Montserrat, sans-serif
+	height: 100vh
+	overflow-y: auto
+	position: fixed
+	width: 100%
+
+	@media (min-width: $large)
+		background: radial-gradient($lightPurple, $midPurple, $darkPurple)
+	
+	&::-webkit-scrollbar
+		width: 0.75rem
+	
+	&::-webkit-scrollbar-track
+		background-color: $darkPurple
+	
+	&::-webkit-scrollbar-thumb
+		background-color: $lightPurple
+		
+	&:has(.modal)
+		overflow: hidden

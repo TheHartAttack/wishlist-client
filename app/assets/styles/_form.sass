@@ -1,0 +1,44 @@
+.form
+	color: $white
+
+	&__group
+		border: none
+		margin-bottom: 1rem
+    
+		&:last-of-type
+			margin-bottom: 2rem
+
+	&__label
+		display: block
+		font-size: 1rem
+		margin-bottom: 0.25em
+
+	&__input
+		box-sizing: border-box
+		font-size: 1.5rem
+		padding: 0.5em
+		width: clamp(0px, 100%, 480px)
+
+	&__submit
+		border: none
+		margin: 0 auto
+
+		&--submitting
+			background-color: $midPurple !important
+
+		&::after,
+		&::before
+			display: none
+
+		&::hover
+			cursor: default
+
+		&-inner
+			display: flex
+			gap: 0.5em
+
+			&--submitting
+				visibility: hidden
+
+	&[disabled] &__submit
+		cursor: default
