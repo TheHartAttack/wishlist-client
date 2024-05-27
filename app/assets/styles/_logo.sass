@@ -1,0 +1,41 @@
+.logo
+	position: relative
+
+	@media (min-width: 480px)
+		white-space: nowrap
+	
+	&__dw
+		-webkit-text-fill-color: transparent
+		background: -webkit-linear-gradient(#2395db, #bc15f0)
+		-webkit-background-clip: text
+		font-family: Road Rage
+		font-size: clamp(3.5rem, 7vw, 7rem)
+		font-weight: 400
+		line-height: 1.25
+		position: relative
+		z-index: 3
+
+	&__outline
+		-webkit-text-fill-color: transparent
+		background: -webkit-linear-gradient($lightPink, $lightBlue)
+		-webkit-background-clip: text
+		left: calc(50% + 2px)
+		top: calc(50% + 2px)
+		z-index: 2
+
+	&__glow,
+	&__outline
+		font-family: Road Rage
+		font-size: clamp(3.5rem, 7vw, 7rem)
+		font-weight: 400
+		line-height: 1.25
+		position: absolute
+		transform: translate(-50%, -50%)
+		width: 100%
+
+	&__glow
+		color: $white
+		filter: blur(0.25rem) opacity(0.25)
+		left: calc(50% + 1px)
+		top: calc(50% + 1px)
+		z-index: 1

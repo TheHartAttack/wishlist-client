@@ -1,0 +1,62 @@
+@keyframes flash-in
+	from
+		transform: translateY(-100%)
+		visibility: hidden
+	
+	to
+		transform: translateY(0)
+		visibility: visible
+	
+
+@keyframes flash-out
+	from
+		transform: translateY(0)
+		visibility: visible
+	
+	to
+		transform: translateY(-100%)
+		visibility: hidden
+	
+
+@keyframes mobile-flash-in
+	from
+		transform: translate(-50%)
+		visibility: hidden
+	
+	to
+		transform: translate(-50%, -100%)
+		visibility: visible
+	
+
+@keyframes mobile-flash-out
+	from
+		transform: translate(-50%, -100%)
+		visibility: visible
+	
+	to
+		transform: translate(-50%)
+		visibility: hidden
+	
+
+@keyframes rotation
+	from
+		--gradient-angle: 0deg
+	
+	to
+		--gradient-angle: 360deg
+	
+
+@keyframes loading
+	from
+		transform: rotate(0deg)
+	
+	to
+		transform: rotate(1turn)
+	
+
+@keyframes loading-items
+	from
+		transform: translate(-50%, -50%) rotate(0deg)
+	
+	to
+		transform: translate(-50%, -50%) rotate(1turn)

@@ -1,0 +1,72 @@
+.edit-item
+	&__form
+		display: grid
+		gap: 1rem
+		grid-template-areas: "image" "text" "button"
+		grid-template-columns: minmax(0, 1fr)
+		margin: 0 auto
+		max-width: 50rem
+		width: 100%
+
+		@media (min-width: $medium)
+			gap: 2rem
+			grid-template-areas: "image text" "button button"
+			grid-template-columns: repeat(2, 1fr)
+	
+	&__col
+		&--image
+			grid-area: image
+
+		&--text
+			grid-area: text
+
+	&__image
+		$this: &
+		
+		&-button
+			&-label
+				align-items: center
+				aspect-ratio: 3/4
+				background: $darkPurple
+				border: 1px solid $lightPurple
+				border-radius: 0.5rem
+				cursor: pointer
+				display: flex
+				font-size: 3rem
+				justify-content: center
+				position: relative
+				width: 100%	
+
+				& svg
+					opacity: 0.125
+					transition: 0.25s ease-in-out
+					z-index: 2
+
+				&:hover
+					& svg
+						opacity: 0.75
+
+					#{$this}-preview
+						filter: brightness(50%) blur(5px)
+
+		&-preview
+			border-radius: inherit
+			height: 100%
+			object-fit: contain
+			position: absolute
+			transition: 0.25s ease-in-out
+			width: 100%
+
+		&-delete,
+		&-file
+			bottom: 0
+			height: 0
+			opacity: 0
+			position: absolute
+			width: 0
+
+	&__input
+		font-family: Montserrat, sans-serif
+
+	&__submit
+		grid-area: button

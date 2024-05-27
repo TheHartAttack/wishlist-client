@@ -1,0 +1,41 @@
+.modal
+	background: radial-gradient(rgba(39, 22, 49, 0.99), rgba(10, 6, 15, 0.99), rgba(0, 0, 0, 0.99))
+	inset: 0
+	overflow: auto
+	padding: 5rem 1rem
+	position: fixed
+	z-index: 9999
+
+	&__close
+		align-items: center
+		color: $lightPurple
+		display: flex
+		font-size: 3rem
+		height: 3rem
+		justify-content: center
+		position: absolute
+		right: 1rem
+		top: 1rem
+		transition: color 0.25s ease-in-out
+		width: 3rem
+		&:hover
+			color: $midPurple
+
+	&__inner
+		align-items: center
+		display: flex
+		justify-content: center
+		min-height: 100%
+		width: 100%
+
+	&-enter
+		opacity: 0
+		&-active
+			opacity: 1
+			transition: opacity 0.25s ease-in-out
+
+	&-exit
+		opacity: 1
+		&-active
+			opacity: 0
+			transition: opacity 0.25s ease-in-out
