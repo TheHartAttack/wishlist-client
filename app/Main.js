@@ -6,7 +6,7 @@ import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client"
 import _ from "lodash"
 
 const client = new ApolloClient({
-  uri: process.env.PRODUCTION_URI,
+  uri: "https://wishlist-gtyn.onrender.com",
   cache: new InMemoryCache()
 })
 
