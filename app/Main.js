@@ -6,7 +6,7 @@ import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client"
 import _ from "lodash"
 
 const client = new ApolloClient({
-  uri: "http://localhost:8000" || process.env.PRODUCTION_URI,
+  uri: process.env.PRODUCTION_URI,
   cache: new InMemoryCache()
 })
 
